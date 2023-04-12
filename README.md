@@ -71,3 +71,5 @@ A brief overview:
 * PsychoPy/PsychoJS to be run in-person (SM1) and online (SM2)
 * Experiment and analyses scripts
 * Includes READMEs (see for more info on each experiment)
+
+See also: https://github.com/kellycotton/perception_labs
