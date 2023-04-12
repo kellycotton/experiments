@@ -1,0 +1,27 @@
+from itertools import combinations_with_replacement, product 
+from collections import defaultdict
+import numpy as np
+import pandas as pd
+
+conds = {'first_level': (['+','-'], 2),'second_level': (['+','-'], 4), 'third_level': (['*','/'], 2), 'fourth_level':(['*','/'], 4), 'fifth_level':(['+','-','*','/'], 4)}
+possible_vals = list(range(1,10))
+results = defaultdict(int)
+for cond in conds:
+    ops = conds[cond][0]
+    num_values = conds[cond][1]
+    ops_comb = list(product(ops, repeat = num_values-1)) 
+    nums_comb = list(product(possible_vals, repeat = num_values))
+    for nc in nums_comb:
+        for oc in ops_comb:
+            curr_level = 0
+            formula = list(np.array([[i, j] for i, j in zip(nc,list(oc)+[0])]).ravel()[:-1])
+            formula = " ".join([str(item) for item in formula])
+            result = float(eval(" ".join([str(item) for item in formula])))
+            if result < 9 and result > 0 and result.is_integer():
+                results[cond,formula] = round(result)
+result_df = pd.DataFrame(results,index=[0]).T.reset_index().rename(columns={'level_0': 'cond','level_1':'formula', 0: 'answer'})
+result_df
+result_df.to_csv('all_eligible_formulas.csv')
+
+result_select_df = result_df.groupby(by="cond").sample(n=42)
+result_select_df.to_csv('selected_formulas.csv')

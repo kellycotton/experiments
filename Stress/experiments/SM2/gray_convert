@@ -1,0 +1,22 @@
+
+print("starting")
+from PIL import Image, ImageOps
+import colorsys
+
+original_imgs = [""]*540
+
+for k in range(540):
+    original_imgs[k] = "object_stim/obj" + str(k) + ".jpg"
+    
+def scalar_to_rgb(scalar):
+    color_list = colorsys.hsv_to_rgb(scalar, 1, 1)
+    color_list = [element * 255 for element in color_list]
+    return color_list  
+
+
+for image in original_imgs:
+    print("converting " + image)
+    gray_image = Image.open(image).convert('L')
+    gray_image.save(image)
+
+print("end")

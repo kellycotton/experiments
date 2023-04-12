@@ -1,0 +1,799 @@
+﻿<?xml version="1.0" ?>
+<PsychoPy2experiment encoding="utf-8" version="2021.1.2">
+  <Settings>
+    <Param name="Audio latency priority" updates="None" val="use prefs" valType="str"/>
+    <Param name="Audio lib" updates="None" val="use prefs" valType="str"/>
+    <Param name="Completed URL" updates="None" val="" valType="str"/>
+    <Param name="Data file delimiter" updates="None" val="auto" valType="str"/>
+    <Param name="Data filename" updates="None" val="u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code"/>
+    <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
+    <Param name="Experiment info" updates="None" val="{'participant': ''}" valType="code"/>
+    <Param name="Force stereo" updates="None" val="True" valType="bool"/>
+    <Param name="Full-screen window" updates="None" val="True" valType="bool"/>
+    <Param name="HTML path" updates="None" val="html" valType="str"/>
+    <Param name="Incomplete URL" updates="None" val="" valType="str"/>
+    <Param name="Monitor" updates="None" val="testMonitor" valType="str"/>
+    <Param name="Resources" updates="None" val="[]" valType="fileList"/>
+    <Param name="Save csv file" updates="None" val="False" valType="bool"/>
+    <Param name="Save excel file" updates="None" val="True" valType="bool"/>
+    <Param name="Save log file" updates="None" val="True" valType="bool"/>
+    <Param name="Save psydat file" updates="None" val="True" valType="bool"/>
+    <Param name="Save wide csv file" updates="None" val="False" valType="bool"/>
+    <Param name="Screen" updates="None" val="1" valType="num"/>
+    <Param name="Show info dlg" updates="None" val="True" valType="bool"/>
+    <Param name="Show mouse" updates="None" val="False" valType="bool"/>
+    <Param name="Units" updates="None" val="height" valType="str"/>
+    <Param name="Use version" updates="None" val="" valType="str"/>
+    <Param name="Window size (pixels)" updates="None" val="[1440, 900]" valType="code"/>
+    <Param name="blendMode" updates="None" val="avg" valType="str"/>
+    <Param name="color" updates="None" val="$[0,0,0]" valType="str"/>
+    <Param name="colorSpace" updates="None" val="rgb" valType="str"/>
+    <Param name="expName" updates="None" val="CM2_B_2" valType="str"/>
+    <Param name="exportHTML" updates="None" val="on Sync" valType="str"/>
+    <Param name="logging level" updates="None" val="debug" valType="code"/>
+  </Settings>
+  <Routines>
+    <Routine name="setup">
+      <CodeComponent name="code_js">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="Array.prototype.append = [].push; &amp;#10;shuffle = util.shuffle;&amp;#10;&amp;#10;if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {&amp;#10;  quitPsychoJS('Mobile device detected. Goodbye!', false)&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Both" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_js" valType="code"/>
+      </CodeComponent>
+      <CodeComponent name="code_start">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="words_practice = [];&amp;#10;words_target = [];&amp;#10;words_lure = [];&amp;#10;words_distractor = [];&amp;#10;rat_stim = [];&amp;#10;&amp;#10;key_to_position = {'a':0,'s':1,'z':2,'x':3}&amp;#10;&amp;#10;targetwords = []&amp;#10;&amp;#10;i=0&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="words_practice = [];&amp;#10;words_target = [];&amp;#10;words_lure = [];&amp;#10;words_distractor = [];&amp;#10;document.body.style.cursor='none';" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="if ((Type === &quot;practice&quot;)) {&amp;#10;    words_practice.append([WordsStimuli]);&amp;#10;} else {&amp;#10;    if ((Type === &quot;target&quot;)) {&amp;#10;        words_target.append([WordsStimuli]);&amp;#10;    } else {&amp;#10;        if ((Type === &quot;lure&quot;)) {&amp;#10;            words_lure.append([WordsStimuli]);&amp;#10;        } else {&amp;#10;            words_distractor.append([WordsStimuli]);&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="if (Type == &quot;practice&quot;):&amp;#10;    words_practice.append([WordsStimuli])&amp;#10;elif (Type == &quot;target&quot;):&amp;#10;    words_target.append([WordsStimuli])&amp;#10;elif (Type == &quot;lure&quot;):&amp;#10;    words_lure.append([WordsStimuli])&amp;#10;else:&amp;#10;    words_distractor.append([WordsStimuli])&amp;#10;" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Both" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_start" valType="code"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="recognition_test">
+      <CodeComponent name="code_ltm">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="m = 0;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="positions = [[(- 0.25), 0], [0.25, 0]];&amp;#10;position_to_key = {[positions[0]]: &quot;left&quot;, [positions[1]]: &quot;right&quot;};&amp;#10;shuffle(positions);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="shuffle(targetwords)&amp;#10;&amp;#10;positions = [(-.25, 0),(.25, 0)]&amp;#10;position_to_key = {positions[0]: 'left', positions[1]: 'right'}&amp;#10;shuffle(positions)&amp;#10;" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Both" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="distractor_text = distractor.text;&amp;#10;target_text = target_ltm.text;&amp;#10;distractor_pos = distractor.pos;&amp;#10;target_pos = target_ltm.pos;&amp;#10;psychoJS.experiment.addData(&quot;TargetWord&quot;, words_target[m][0]);&amp;#10;psychoJS.experiment.addData(&quot;TargetTextDisplayed&quot;, target_text);&amp;#10;psychoJS.experiment.addData(&quot;DistractorWord&quot;, distractor_text);&amp;#10;psychoJS.experiment.addData('TargetPosition', target_pos)&amp;#10;psychoJS.experiment.addData('DistractorPosition', distractor_pos)&amp;#10;m = m+1;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="distractor_text = distractor.text&amp;#10;target_text = target_ltm.text&amp;#10;distractor_pos = distractor.pos&amp;#10;target_pos = target_ltm.pos&amp;#10;" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_ltm" valType="code"/>
+      </CodeComponent>
+      <PolygonComponent name="fixation_ltm">
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+        <Param name="nVertices" updates="constant" val="4" valType="int"/>
+        <Param name="name" updates="None" val="fixation_ltm" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="shape" updates="constant" val="cross" valType="str"/>
+        <Param name="size" updates="constant" val="(0.1, 0.1)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val=".5" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </PolygonComponent>
+      <TextComponent name="distractor">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="distractor" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="set every repeat" val="positions.pop()" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val=".5" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="180" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="set every repeat" val="$words_distractor.pop()" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="target_ltm">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="target_ltm" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="set every repeat" val="positions.pop()" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val=".5" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="180" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="set every repeat" val="$words_target[m]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <SliderComponent name="slider_right">
+        <Param name="borderColor" updates="constant" val="White" valType="color"/>
+        <Param name="color" updates="constant" val="LightGray" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="fillColor" updates="constant" val="Red" valType="color"/>
+        <Param name="flip" updates="constant" val="False" valType="bool"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="granularity" updates="constant" val="0" valType="code"/>
+        <Param name="labels" updates="constant" val="'Guess', 'Sure'" valType="list"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="num"/>
+        <Param name="name" updates="None" val="slider_right" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(.35, -0.25)" valType="code"/>
+        <Param name="readOnly" updates="constant" val="False" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="size" updates="constant" val="(.6, 0.05)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val=".5" valType="code"/>
+        <Param name="stopType" updates="None" val="condition" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="storeHistory" updates="constant" val="False" valType="bool"/>
+        <Param name="storeRating" updates="constant" val="True" valType="bool"/>
+        <Param name="storeRatingTime" updates="constant" val="True" valType="bool"/>
+        <Param name="styleTweaks" updates="constant" val="[]" valType="list"/>
+        <Param name="styles" updates="constant" val="['rating', 'labels45']" valType="fixedList"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="ticks" updates="constant" val="(1,100)" valType="list"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </SliderComponent>
+      <SliderComponent name="slider_left">
+        <Param name="borderColor" updates="constant" val="White" valType="color"/>
+        <Param name="color" updates="constant" val="LightGray" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="fillColor" updates="constant" val="Red" valType="color"/>
+        <Param name="flip" updates="constant" val="False" valType="bool"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="granularity" updates="constant" val="0" valType="code"/>
+        <Param name="labels" updates="constant" val="'Sure','Guess'" valType="list"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="num"/>
+        <Param name="name" updates="None" val="slider_left" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(-.35, -0.25)" valType="code"/>
+        <Param name="readOnly" updates="constant" val="False" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="size" updates="constant" val="(.6, 0.05)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val=".5" valType="code"/>
+        <Param name="stopType" updates="None" val="condition" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="storeHistory" updates="constant" val="False" valType="bool"/>
+        <Param name="storeRating" updates="constant" val="True" valType="bool"/>
+        <Param name="storeRatingTime" updates="constant" val="True" valType="bool"/>
+        <Param name="styleTweaks" updates="constant" val="[]" valType="list"/>
+        <Param name="styles" updates="constant" val="['rating', 'labels45']" valType="fixedList"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="ticks" updates="constant" val="(-100,1)" valType="list"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </SliderComponent>
+    </Routine>
+    <Routine name="instructions_ltm">
+      <TextComponent name="instr_text_ltm_1">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.045" valType="code"/>
+        <Param name="name" updates="None" val="instr_text_ltm_1" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0,.3)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="You will see two words on the screen. One of the words was previously displayed yesterday during this task: &amp;#10;&amp;#10;" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="instr_resp_ltm">
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="instr_resp_ltm" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="nothing" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+      <TextComponent name="instr_text_ltm_2">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.045" valType="code"/>
+        <Param name="name" updates="None" val="instr_text_ltm_2" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -.3)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Below each word there is a confidence bar ranging from ''Guess'' to ''Sure''.&amp;#10;Use your mouse to indicate which word was previously presented and your level of confidence using the bar.&amp;#10;&amp;#10;Press &lt;space&gt; to continue." valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="text_example_1">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.035" valType="code"/>
+        <Param name="name" updates="None" val="text_example_1" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0.1)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="TWIG" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="text_example_2">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.035" valType="code"/>
+        <Param name="name" updates="None" val="text_example_2" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0.1, .2)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="TWIG" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="text_example_3">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.035" valType="code"/>
+        <Param name="name" updates="None" val="text_example_3" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(-0.1, .2)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="SHEEP" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="text_example_4">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.035" valType="code"/>
+        <Param name="name" updates="None" val="text_example_4" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0.1, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="SALT" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="text_example_5">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.035" valType="code"/>
+        <Param name="name" updates="None" val="text_example_5" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(-0.1, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="BONE" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <CodeComponent name="code">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="shuffle(words_target);&amp;#10;shuffle(words_distractor);&amp;#10;document.body.style.cursor='auto';&amp;#10;m = 0;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="shuffle(targetwords)" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Both" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code" valType="code"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="stimuli_words"/>
+    <Routine name="end">
+      <TextComponent name="end_si_text">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="end_si_text" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="You have reached the end of the task. &amp;#10;&amp;#10;Please press &lt;space&gt; when you are ready to continue." valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="key_resp">
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="nothing" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="rei_scale">
+      <TextComponent name="rei_instructions">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+        <Param name="name" updates="None" val="rei_instructions" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, .25)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="180" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Using the following scale, please rate the extent that these items refer to you." valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="rei_1">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
+        <Param name="name" updates="None" val="rei_1" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(-.25, 0.05)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="180" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="1&amp;#10;Definitely true&amp;#10;of myself" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="rei_2">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
+        <Param name="name" updates="None" val="rei_2" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(-.125, 0.085)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="180" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="2" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="rei_3">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
+        <Param name="name" updates="None" val="rei_3" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0.085)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="180" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="3" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="rei_4">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
+        <Param name="name" updates="None" val="rei_4" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(.125, .085)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="180" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="4" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="rei_5">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
+        <Param name="name" updates="None" val="rei_5" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(.25, .05)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="180" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="5&amp;#10;Definitely not &amp;#10;true of myself" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="rei_text">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+        <Param name="name" updates="None" val="rei_text" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -.15)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="180" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="set every repeat" val="$rei_question" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="key_resp_rei">
+        <Param name="allowedKeys" updates="constant" val="'1','2','3','4','5'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_rei" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="180" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="setup_2">
+      <CodeComponent name="code_2">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="words_delayed.append([WordsStimuli_2]);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="words_delayed.append([WordsStimuli_2])&amp;#10;" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_2" valType="code"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="end_experiment">
+      <TextComponent name="text_end_exp">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
+        <Param name="name" updates="None" val="text_end_exp" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Congratulations, you have reached the end of the experiment!&amp;#10;&amp;#10;Thank you for your time and participation.&amp;#10;&amp;#10;Please press &lt;space&gt; to close." valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="key_resp_5">
+        <Param name="allowedKeys" updates="constant" val="'space','return'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_5" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="nothing" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+  </Routines>
+  <Flow>
+    <LoopInitiator loopType="TrialHandler" name="start">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="[{'WordsStimuli': 'STAIN', 'Type': 'lure'}, {'WordsStimuli': 'QUEEN', 'Type': 'lure'}, {'WordsStimuli': 'JUICE', 'Type': 'lure'}, {'WordsStimuli': 'CANDY', 'Type': 'lure'}, {'WordsStimuli': 'BASS', 'Type': 'lure'}, {'WordsStimuli': 'SODA', 'Type': 'lure'}, {'WordsStimuli': 'POSTER', 'Type': 'lure'}, {'WordsStimuli': 'WAIST', 'Type': 'lure'}, {'WordsStimuli': 'SPEAR', 'Type': 'lure'}, {'WordsStimuli': 'CAROL', 'Type': 'lure'}, {'WordsStimuli': 'HEAP', 'Type': 'lure'}, {'WordsStimuli': 'PARK', 'Type': 'lure'}, {'WordsStimuli': 'UNCLE', 'Type': 'lure'}, {'WordsStimuli': 'CAPE', 'Type': 'lure'}, {'WordsStimuli': 'BOSS', 'Type': 'lure'}, {'WordsStimuli': 'SOIL', 'Type': 'lure'}, {'WordsStimuli': 'MIRROR', 'Type': 'lure'}, {'WordsStimuli': 'SLAP', 'Type': 'lure'}, {'WordsStimuli': 'KING', 'Type': 'lure'}, {'WordsStimuli': 'FIRE', 'Type': 'lure'}, {'WordsStimuli': 'BREAD', 'Type': 'lure'}, {'WordsStimuli': 'TUNNEL', 'Type': 'lure'}, {'WordsStimuli': 'HAIR', 'Type': 'lure'}, {'WordsStimuli': 'BIRCH', 'Type': 'lure'}, {'WordsStimuli': 'CAGE', 'Type': 'lure'}, {'WordsStimuli': 'HOTEL', 'Type': 'lure'}, {'WordsStimuli': 'SACK', 'Type': 'lure'}, {'WordsStimuli': 'GRAPE', 'Type': 'lure'}, {'WordsStimuli': 'FLAME', 'Type': 'lure'}, {'WordsStimuli': 'CEREAL', 'Type': 'lure'}, {'WordsStimuli': 'TROUT', 'Type': 'lure'}, {'WordsStimuli': 'DIAL', 'Type': 'lure'}, {'WordsStimuli': 'SCALE', 'Type': 'lure'}, {'WordsStimuli': 'MARKET', 'Type': 'lure'}, {'WordsStimuli': 'BEACH', 'Type': 'lure'}, {'WordsStimuli': 'DRIVER', 'Type': 'lure'}, {'WordsStimuli': 'SLUSH', 'Type': 'lure'}, {'WordsStimuli': 'GLASS', 'Type': 'lure'}, {'WordsStimuli': 'PILE', 'Type': 'lure'}, {'WordsStimuli': 'PEST', 'Type': 'lure'}, {'WordsStimuli': 'FLUTE', 'Type': 'lure'}, {'WordsStimuli': 'MOTOR', 'Type': 'lure'}, {'WordsStimuli': 'CROWN', 'Type': 'lure'}, {'WordsStimuli': 'PRINCE', 'Type': 'lure'}, {'WordsStimuli': 'HORN', 'Type': 'lure'}, {'WordsStimuli': 'STREET', 'Type': 'lure'}, {'WordsStimuli': 'SHOE', 'Type': 'lure'}, {'WordsStimuli': 'HORSE', 'Type': 'lure'}, {'WordsStimuli': 'LEAF', 'Type': 'lure'}, {'WordsStimuli': 'CHART', 'Type': 'lure'}, {'WordsStimuli': 'CABLE', 'Type': 'lure'}, {'WordsStimuli': 'THROAT', 'Type': 'lure'}, {'WordsStimuli': 'KILT', 'Type': 'lure'}, {'WordsStimuli': 'PEOPLE', 'Type': 'lure'}, {'WordsStimuli': 'PUPPY', 'Type': 'lure'}, {'WordsStimuli': 'WIRE', 'Type': 'lure'}, {'WordsStimuli': 'LINEN', 'Type': 'lure'}, {'WordsStimuli': 'HOLE', 'Type': 'lure'}, {'WordsStimuli': 'KNEE', 'Type': 'lure'}, {'WordsStimuli': 'WEED', 'Type': 'lure'}, {'WordsStimuli': 'JERSEY', 'Type': 'lure'}, {'WordsStimuli': 'FLOWER', 'Type': 'lure'}, {'WordsStimuli': 'CAMP', 'Type': 'lure'}, {'WordsStimuli': 'DAWN', 'Type': 'lure'}, {'WordsStimuli': 'COFFIN', 'Type': 'lure'}, {'WordsStimuli': 'SHEET', 'Type': 'lure'}, {'WordsStimuli': 'FLOOR', 'Type': 'lure'}, {'WordsStimuli': 'SORE', 'Type': 'lure'}, {'WordsStimuli': 'PLUG', 'Type': 'lure'}, {'WordsStimuli': 'COACH', 'Type': 'lure'}, {'WordsStimuli': 'STEAM', 'Type': 'lure'}, {'WordsStimuli': 'WING', 'Type': 'lure'}, {'WordsStimuli': 'BUTTER', 'Type': 'lure'}, {'WordsStimuli': 'QUILT', 'Type': 'lure'}, {'WordsStimuli': 'GLOBE', 'Type': 'lure'}, {'WordsStimuli': 'TOAST', 'Type': 'lure'}, {'WordsStimuli': 'ROBBER', 'Type': 'lure'}, {'WordsStimuli': 'BRANCH', 'Type': 'lure'}, {'WordsStimuli': 'BLOCK', 'Type': 'lure'}, {'WordsStimuli': 'TOWN', 'Type': 'lure'}, {'WordsStimuli': 'COPPER', 'Type': 'lure'}, {'WordsStimuli': 'RIVER', 'Type': 'lure'}, {'WordsStimuli': 'SAUCER', 'Type': 'lure'}, {'WordsStimuli': 'TENT', 'Type': 'lure'}, {'WordsStimuli': 'BOARD', 'Type': 'lure'}, {'WordsStimuli': 'NEST', 'Type': 'lure'}, {'WordsStimuli': 'GRASS', 'Type': 'lure'}, {'WordsStimuli': 'EARTH', 'Type': 'lure'}, {'WordsStimuli': 'ONION', 'Type': 'lure'}, {'WordsStimuli': 'WIND', 'Type': 'lure'}, {'WordsStimuli': 'MOLE', 'Type': 'lure'}, {'WordsStimuli': 'LAWN', 'Type': 'lure'}, {'WordsStimuli': 'MOUSE', 'Type': 'lure'}, {'WordsStimuli': 'HONEY', 'Type': 'lure'}, {'WordsStimuli': 'WATCH', 'Type': 'lure'}, {'WordsStimuli': 'FENCE', 'Type': 'lure'}, {'WordsStimuli': 'BOMB', 'Type': 'lure'}, {'WordsStimuli': 'DUST', 'Type': 'lure'}, {'WordsStimuli': 'CLUB', 'Type': 'lure'}, {'WordsStimuli': 'FRUIT', 'Type': 'lure'}, {'WordsStimuli': 'TAIL', 'Type': 'lure'}, {'WordsStimuli': 'SEAT', 'Type': 'lure'}, {'WordsStimuli': 'RACKET', 'Type': 'lure'}, {'WordsStimuli': 'ROAD', 'Type': 'lure'}, {'WordsStimuli': 'HAND', 'Type': 'lure'}, {'WordsStimuli': 'DECK', 'Type': 'lure'}, {'WordsStimuli': 'COIN', 'Type': 'lure'}, {'WordsStimuli': 'CLOCK', 'Type': 'lure'}, {'WordsStimuli': 'SAIL', 'Type': 'lure'}, {'WordsStimuli': 'SNAIL', 'Type': 'lure'}, {'WordsStimuli': 'CHALK', 'Type': 'lure'}, {'WordsStimuli': 'PEDAL', 'Type': 'lure'}, {'WordsStimuli': 'SNAKE', 'Type': 'lure'}, {'WordsStimuli': 'PEPPER', 'Type': 'lure'}, {'WordsStimuli': 'ZIPPER', 'Type': 'lure'}, {'WordsStimuli': 'CHEEK', 'Type': 'lure'}, {'WordsStimuli': 'ROCK', 'Type': 'lure'}, {'WordsStimuli': 'STICK', 'Type': 'lure'}, {'WordsStimuli': 'OVEN', 'Type': 'lure'}, {'WordsStimuli': 'GOLD', 'Type': 'lure'}, {'WordsStimuli': 'HERB', 'Type': 'lure'}, {'WordsStimuli': 'GOLF', 'Type': 'lure'}, {'WordsStimuli': 'MEADOW', 'Type': 'lure'}, {'WordsStimuli': 'SLEEP', 'Type': 'lure'}, {'WordsStimuli': 'RUBBER', 'Type': 'lure'}, {'WordsStimuli': 'ROSE', 'Type': 'lure'}, {'WordsStimuli': 'RABBI', 'Type': 'lure'}, {'WordsStimuli': 'TICKET', 'Type': 'lure'}, {'WordsStimuli': 'CAST', 'Type': 'lure'}, {'WordsStimuli': 'LAKE', 'Type': 'lure'}, {'WordsStimuli': 'RICE', 'Type': 'lure'}, {'WordsStimuli': 'RESORT', 'Type': 'lure'}, {'WordsStimuli': 'KISS', 'Type': 'lure'}, {'WordsStimuli': 'TEST', 'Type': 'lure'}, {'WordsStimuli': 'INFANT', 'Type': 'lure'}, {'WordsStimuli': 'FROG', 'Type': 'lure'}, {'WordsStimuli': 'BLOUSE', 'Type': 'lure'}, {'WordsStimuli': 'DOLLAR', 'Type': 'lure'}, {'WordsStimuli': 'TRUNK', 'Type': 'lure'}, {'WordsStimuli': 'KERNEL', 'Type': 'lure'}, {'WordsStimuli': 'HOME', 'Type': 'lure'}, {'WordsStimuli': 'CATTLE', 'Type': 'lure'}, {'WordsStimuli': 'BELL', 'Type': 'lure'}, {'WordsStimuli': 'CORK', 'Type': 'lure'}, {'WordsStimuli': 'PLUM', 'Type': 'lure'}, {'WordsStimuli': 'CAKE', 'Type': 'lure'}, {'WordsStimuli': 'BOOK', 'Type': 'lure'}, {'WordsStimuli': 'BARREL', 'Type': 'lure'}, {'WordsStimuli': 'KITE', 'Type': 'lure'}, {'WordsStimuli': 'BLADE', 'Type': 'lure'}, {'WordsStimuli': 'COAT', 'Type': 'lure'}, {'WordsStimuli': 'PICKLE', 'Type': 'lure'}, {'WordsStimuli': 'CIGAR', 'Type': 'lure'}, {'WordsStimuli': 'WIDOW', 'Type': 'lure'}, {'WordsStimuli': 'WHALE', 'Type': 'lure'}, {'WordsStimuli': 'STEP', 'Type': 'lure'}, {'WordsStimuli': 'SKIN', 'Type': 'lure'}, {'WordsStimuli': 'TRAY', 'Type': 'lure'}, {'WordsStimuli': 'SLEIGH', 'Type': 'lure'}, {'WordsStimuli': 'GIRL', 'Type': 'lure'}, {'WordsStimuli': 'CIRCLE', 'Type': 'lure'}, {'WordsStimuli': 'BURNER', 'Type': 'lure'}, {'WordsStimuli': 'WORM', 'Type': 'lure'}, {'WordsStimuli': 'LIQUOR', 'Type': 'lure'}, {'WordsStimuli': 'TRACK', 'Type': 'lure'}, {'WordsStimuli': 'DRESS', 'Type': 'lure'}, {'WordsStimuli': 'FRAME', 'Type': 'lure'}, {'WordsStimuli': 'PERSON', 'Type': 'lure'}, {'WordsStimuli': 'CURLER', 'Type': 'lure'}, {'WordsStimuli': 'ARCH', 'Type': 'lure'}, {'WordsStimuli': 'COKE', 'Type': 'lure'}, {'WordsStimuli': 'AISLE', 'Type': 'lure'}, {'WordsStimuli': 'ROOF', 'Type': 'lure'}, {'WordsStimuli': 'ROCKET', 'Type': 'lure'}, {'WordsStimuli': 'WOOL', 'Type': 'lure'}, {'WordsStimuli': 'OUNCE', 'Type': 'lure'}, {'WordsStimuli': 'FUDGE', 'Type': 'lure'}, {'WordsStimuli': 'SCHOOL', 'Type': 'lure'}, {'WordsStimuli': 'MIST', 'Type': 'lure'}, {'WordsStimuli': 'SLEEVE', 'Type': 'lure'}, {'WordsStimuli': 'ESSAY', 'Type': 'lure'}, {'WordsStimuli': 'BRUSH', 'Type': 'lure'}, {'WordsStimuli': 'AXLE', 'Type': 'lure'}, {'WordsStimuli': 'CANCER', 'Type': 'lure'}, {'WordsStimuli': 'CIRCUS', 'Type': 'lure'}, {'WordsStimuli': 'LADY', 'Type': 'lure'}, {'WordsStimuli': 'BEAM', 'Type': 'lure'}, {'WordsStimuli': 'LIQUID', 'Type': 'lure'}, {'WordsStimuli': 'ADULT', 'Type': 'lure'}, {'WordsStimuli': 'ROBIN', 'Type': 'lure'}, {'WordsStimuli': 'FILE', 'Type': 'lure'}, {'WordsStimuli': 'FLEA', 'Type': 'lure'}, {'WordsStimuli': 'TOOL', 'Type': 'lure'}, {'WordsStimuli': 'SONG', 'Type': 'lure'}, {'WordsStimuli': 'POLISH', 'Type': 'lure'}, {'WordsStimuli': 'SHOP', 'Type': 'lure'}, {'WordsStimuli': 'FISH', 'Type': 'lure'}, {'WordsStimuli': 'MIXER', 'Type': 'lure'}, {'WordsStimuli': 'CLIFF', 'Type': 'lure'}, {'WordsStimuli': 'DEER', 'Type': 'lure'}, {'WordsStimuli': 'TANK', 'Type': 'lure'}, {'WordsStimuli': 'SHORE', 'Type': 'lure'}, {'WordsStimuli': 'TENNIS', 'Type': 'lure'}, {'WordsStimuli': 'CANDLE', 'Type': 'lure'}, {'WordsStimuli': 'LEAD', 'Type': 'lure'}, {'WordsStimuli': 'GUARD', 'Type': 'lure'}, {'WordsStimuli': 'METAL', 'Type': 'lure'}, {'WordsStimuli': 'PEAR', 'Type': 'lure'}, {'WordsStimuli': 'CAVE', 'Type': 'lure'}, {'WordsStimuli': 'PIPE', 'Type': 'lure'}, {'WordsStimuli': 'DIVE', 'Type': 'lure'}, {'WordsStimuli': 'DATE', 'Type': 'lure'}, {'WordsStimuli': 'HOCKEY', 'Type': 'lure'}, {'WordsStimuli': 'HILL', 'Type': 'lure'}, {'WordsStimuli': 'STEAK', 'Type': 'lure'}, {'WordsStimuli': 'CRUMB', 'Type': 'lure'}, {'WordsStimuli': 'PINE', 'Type': 'lure'}, {'WordsStimuli': 'POND', 'Type': 'lure'}, {'WordsStimuli': 'LAND', 'Type': 'lure'}, {'WordsStimuli': 'COTTON', 'Type': 'lure'}, {'WordsStimuli': 'LUNG', 'Type': 'lure'}, {'WordsStimuli': 'KNIGHT', 'Type': 'lure'}, {'WordsStimuli': 'CHEST', 'Type': 'lure'}, {'WordsStimuli': 'DRUG', 'Type': 'lure'}, {'WordsStimuli': 'LIGHT', 'Type': 'lure'}, {'WordsStimuli': 'TRAIL', 'Type': 'lure'}, {'WordsStimuli': 'MAGNET', 'Type': 'lure'}, {'WordsStimuli': 'COUSIN', 'Type': 'lure'}, {'WordsStimuli': 'STRING', 'Type': 'lure'}, {'WordsStimuli': 'BATTLE', 'Type': 'lure'}, {'WordsStimuli': 'BLONDE', 'Type': 'lure'}, {'WordsStimuli': 'STING', 'Type': 'lure'}, {'WordsStimuli': 'CREAM', 'Type': 'lure'}, {'WordsStimuli': 'ISLAND', 'Type': 'lure'}, {'WordsStimuli': 'GRAPH', 'Type': 'lure'}, {'WordsStimuli': 'POET', 'Type': 'lure'}, {'WordsStimuli': 'DRAIN', 'Type': 'lure'}, {'WordsStimuli': 'CAFE', 'Type': 'lure'}, {'WordsStimuli': 'VODKA', 'Type': 'lure'}, {'WordsStimuli': 'HELMET', 'Type': 'lure'}, {'WordsStimuli': 'GANG', 'Type': 'lure'}, {'WordsStimuli': 'HOOD', 'Type': 'lure'}, {'WordsStimuli': 'FROST', 'Type': 'lure'}, {'WordsStimuli': 'LINE', 'Type': 'lure'}, {'WordsStimuli': 'SAUCE', 'Type': 'lure'}, {'WordsStimuli': 'SEAL', 'Type': 'lure'}, {'WordsStimuli': 'ENGINE', 'Type': 'lure'}, {'WordsStimuli': 'FEET', 'Type': 'lure'}, {'WordsStimuli': 'TEETH', 'Type': 'lure'}, {'WordsStimuli': 'OCEAN', 'Type': 'lure'}, {'WordsStimuli': 'SLOPE', 'Type': 'lure'}, {'WordsStimuli': 'BOAT', 'Type': 'lure'}, {'WordsStimuli': 'LENS', 'Type': 'lure'}, {'WordsStimuli': 'FELLOW', 'Type': 'lure'}, {'WordsStimuli': 'SNOW', 'Type': 'lure'}, {'WordsStimuli': 'ALLEY', 'Type': 'lure'}, {'WordsStimuli': 'SEAM', 'Type': 'lure'}, {'WordsStimuli': 'MOOSE', 'Type': 'lure'}, {'WordsStimuli': 'POUND', 'Type': 'lure'}, {'WordsStimuli': 'STAFF', 'Type': 'lure'}, {'WordsStimuli': 'KETTLE', 'Type': 'lure'}, {'WordsStimuli': 'SPOOL', 'Type': 'lure'}, {'WordsStimuli': 'SOAP', 'Type': 'lure'}, {'WordsStimuli': 'PEACH', 'Type': 'lure'}, {'WordsStimuli': 'PUNCH', 'Type': 'lure'}, {'WordsStimuli': 'KICK', 'Type': 'lure'}, {'WordsStimuli': 'COOK', 'Type': 'lure'}, {'WordsStimuli': 'MATCH', 'Type': 'lure'}, {'WordsStimuli': 'WOLF', 'Type': 'lure'}, {'WordsStimuli': 'SCOTCH', 'Type': 'lure'}, {'WordsStimuli': 'CIDER', 'Type': 'lure'}, {'WordsStimuli': 'MUSCLE', 'Type': 'lure'}, {'WordsStimuli': 'SILK', 'Type': 'lure'}, {'WordsStimuli': 'POLE', 'Type': 'lure'}, {'WordsStimuli': 'PARTY', 'Type': 'lure'}, {'WordsStimuli': 'RECORD', 'Type': 'lure'}, {'WordsStimuli': 'DAGGER', 'Type': 'lure'}, {'WordsStimuli': 'SOCK', 'Type': 'lure'}, {'WordsStimuli': 'LETTER', 'Type': 'lure'}, {'WordsStimuli': 'ARTIST', 'Type': 'lure'}, {'WordsStimuli': 'YAWN', 'Type': 'lure'}, {'WordsStimuli': 'CANNON', 'Type': 'lure'}, {'WordsStimuli': 'CHINA', 'Type': 'lure'}, {'WordsStimuli': 'DOCK', 'Type': 'lure'}, {'WordsStimuli': 'CONE', 'Type': 'lure'}, {'WordsStimuli': 'COUCH', 'Type': 'lure'}, {'WordsStimuli': 'BEAK', 'Type': 'lure'}, {'WordsStimuli': 'PLIERS', 'Type': 'lure'}, {'WordsStimuli': 'DOCTOR', 'Type': 'lure'}, {'WordsStimuli': 'RUST', 'Type': 'lure'}, {'WordsStimuli': 'RING', 'Type': 'lure'}, {'WordsStimuli': 'SLEET', 'Type': 'lure'}, {'WordsStimuli': 'VELVET', 'Type': 'lure'}, {'WordsStimuli': 'ORGAN', 'Type': 'lure'}, {'WordsStimuli': 'BAND', 'Type': 'lure'}, {'WordsStimuli': 'APPLE', 'Type': 'lure'}, {'WordsStimuli': 'NOTE', 'Type': 'lure'}, {'WordsStimuli': 'TURTLE', 'Type': 'lure'}, {'WordsStimuli': 'CABIN', 'Type': 'lure'}, {'WordsStimuli': 'VEIN', 'Type': 'lure'}, {'WordsStimuli': 'CURB', 'Type': 'lure'}, {'WordsStimuli': 'CLAM', 'Type': 'lure'}, {'WordsStimuli': 'SCAB', 'Type': 'lure'}, {'WordsStimuli': 'DITCH', 'Type': 'lure'}, {'WordsStimuli': 'TRIBE', 'Type': 'lure'}, {'WordsStimuli': 'BRANDY', 'Type': 'lure'}, {'WordsStimuli': 'SPARK', 'Type': 'lure'}, {'WordsStimuli': 'STONE', 'Type': 'lure'}, {'WordsStimuli': 'PONY', 'Type': 'lure'}, {'WordsStimuli': 'FOIL', 'Type': 'lure'}, {'WordsStimuli': 'BELLY', 'Type': 'lure'}, {'WordsStimuli': 'PLANT', 'Type': 'lure'}, {'WordsStimuli': 'BATH', 'Type': 'lure'}, {'WordsStimuli': 'SUNSET', 'Type': 'lure'}, {'WordsStimuli': 'SHRIMP', 'Type': 'lure'}, {'WordsStimuli': 'GARLIC', 'Type': 'lure'}, {'WordsStimuli': 'POCKET', 'Type': 'lure'}, {'WordsStimuli': 'COFFEE', 'Type': 'lure'}, {'WordsStimuli': 'TIGER', 'Type': 'lure'}, {'WordsStimuli': 'SWIM', 'Type': 'lure'}, {'WordsStimuli': 'HEART', 'Type': 'lure'}, {'WordsStimuli': 'YARD', 'Type': 'lure'}, {'WordsStimuli': 'SHARK', 'Type': 'lure'}, {'WordsStimuli': 'DOLL', 'Type': 'lure'}, {'WordsStimuli': 'SKIRT', 'Type': 'lure'}, {'WordsStimuli': 'AUNT', 'Type': 'lure'}, {'WordsStimuli': 'BABY', 'Type': 'lure'}, {'WordsStimuli': 'COURT', 'Type': 'lure'}, {'WordsStimuli': 'SCREAM', 'Type': 'lure'}, {'WordsStimuli': 'PEARL', 'Type': 'lure'}, {'WordsStimuli': 'LOTION', 'Type': 'lure'}, {'WordsStimuli': 'WINTER', 'Type': 'lure'}, {'WordsStimuli': 'ROPE', 'Type': 'lure'}, {'WordsStimuli': 'GRAVY', 'Type': 'lure'}, {'WordsStimuli': 'GLOVE', 'Type': 'lure'}, {'WordsStimuli': 'CLOWN', 'Type': 'lure'}, {'WordsStimuli': 'SEED', 'Type': 'lure'}, {'WordsStimuli': 'SNEEZE', 'Type': 'lure'}, {'WordsStimuli': 'SPONGE', 'Type': 'lure'}, {'WordsStimuli': 'LANE', 'Type': 'lure'}, {'WordsStimuli': 'FLOOD', 'Type': 'lure'}, {'WordsStimuli': 'SWEEP', 'Type': 'lure'}, {'WordsStimuli': 'FOOD', 'Type': 'lure'}, {'WordsStimuli': 'BARK', 'Type': 'lure'}, {'WordsStimuli': 'STAIR', 'Type': 'lure'}, {'WordsStimuli': 'BREEZE', 'Type': 'lure'}, {'WordsStimuli': 'CLOSET', 'Type': 'lure'}, {'WordsStimuli': 'LAMB', 'Type': 'lure'}, {'WordsStimuli': 'BUSH', 'Type': 'lure'}, {'WordsStimuli': 'PILL', 'Type': 'lure'}, {'WordsStimuli': 'GROUND', 'Type': 'practice'}, {'WordsStimuli': 'DOME', 'Type': 'practice'}, {'WordsStimuli': 'MOVIE', 'Type': 'practice'}, {'WordsStimuli': 'TEXT', 'Type': 'practice'}, {'WordsStimuli': 'CHOIR', 'Type': 'practice'}, {'WordsStimuli': 'CROSS', 'Type': 'practice'}, {'WordsStimuli': 'CHURCH', 'Type': 'practice'}, {'WordsStimuli': 'GOWN', 'Type': 'practice'}, {'WordsStimuli': 'TIDE', 'Type': 'practice'}, {'WordsStimuli': 'COAL', 'Type': 'practice'}, {'WordsStimuli': 'SOUND', 'Type': 'practice'}, {'WordsStimuli': 'THREAD', 'Type': 'practice'}, {'WordsStimuli': 'CARD', 'Type': 'practice'}, {'WordsStimuli': 'MONKEY', 'Type': 'practice'}, {'WordsStimuli': 'POWDER', 'Type': 'practice'}, {'WordsStimuli': 'WOMAN', 'Type': 'practice'}, {'WordsStimuli': 'COIL', 'Type': 'practice'}, {'WordsStimuli': 'NOSE', 'Type': 'practice'}, {'WordsStimuli': 'DANCE', 'Type': 'practice'}, {'WordsStimuli': 'SHIRT', 'Type': 'practice'}, {'WordsStimuli': 'LUNCH', 'Type': 'practice'}, {'WordsStimuli': 'SHIP', 'Type': 'practice'}, {'WordsStimuli': 'CROWD', 'Type': 'practice'}, {'WordsStimuli': 'NAPKIN', 'Type': 'practice'}, {'WordsStimuli': 'CARPET', 'Type': 'practice'}, {'WordsStimuli': 'NECK', 'Type': 'practice'}, {'WordsStimuli': 'WORKER', 'Type': 'practice'}, {'WordsStimuli': 'JEWEL', 'Type': 'practice'}, {'WordsStimuli': 'GIFT', 'Type': 'practice'}, {'WordsStimuli': 'TABLE', 'Type': 'practice'}, {'WordsStimuli': 'TRASH', 'Type': 'practice'}, {'WordsStimuli': 'NIGHT', 'Type': 'practice'}, {'WordsStimuli': 'BUBBLE', 'Type': 'practice'}, {'WordsStimuli': 'GOAL', 'Type': 'practice'}, {'WordsStimuli': 'PAINT', 'Type': 'practice'}, {'WordsStimuli': 'MINER', 'Type': 'practice'}, {'WordsStimuli': 'SALAD', 'Type': 'practice'}, {'WordsStimuli': 'POOL', 'Type': 'practice'}, {'WordsStimuli': 'INSECT', 'Type': 'practice'}, {'WordsStimuli': 'ANKLE', 'Type': 'practice'}, {'WordsStimuli': 'MEAL', 'Type': 'practice'}, {'WordsStimuli': 'KITTEN', 'Type': 'practice'}, {'WordsStimuli': 'PARCEL', 'Type': 'practice'}, {'WordsStimuli': 'CALF', 'Type': 'practice'}, {'WordsStimuli': 'AERIAL', 'Type': 'practice'}, {'WordsStimuli': 'POLLEN', 'Type': 'practice'}, {'WordsStimuli': 'SHED', 'Type': 'practice'}, {'WordsStimuli': 'DRINK', 'Type': 'target'}, {'WordsStimuli': 'SPECK', 'Type': 'target'}, {'WordsStimuli': 'MAROON', 'Type': 'target'}, {'WordsStimuli': 'ORANGE', 'Type': 'target'}, {'WordsStimuli': 'VERSE', 'Type': 'target'}, {'WordsStimuli': 'BOTTLE', 'Type': 'target'}, {'WordsStimuli': 'TOILET', 'Type': 'target'}, {'WordsStimuli': 'SMILE', 'Type': 'target'}, {'WordsStimuli': 'BOWL', 'Type': 'target'}, {'WordsStimuli': 'LOOP', 'Type': 'target'}, {'WordsStimuli': 'KNOB', 'Type': 'target'}, {'WordsStimuli': 'RAIN', 'Type': 'target'}, {'WordsStimuli': 'POPE', 'Type': 'target'}, {'WordsStimuli': 'NOTICE', 'Type': 'target'}, {'WordsStimuli': 'CUBE', 'Type': 'target'}, {'WordsStimuli': 'CLOTH', 'Type': 'target'}, {'WordsStimuli': 'GATE', 'Type': 'target'}, {'WordsStimuli': 'PHONE', 'Type': 'target'}, {'WordsStimuli': 'PUDDLE', 'Type': 'target'}, {'WordsStimuli': 'BUMP', 'Type': 'target'}, {'WordsStimuli': 'MENU', 'Type': 'target'}, {'WordsStimuli': 'CHERRY', 'Type': 'target'}, {'WordsStimuli': 'PALM', 'Type': 'target'}, {'WordsStimuli': 'WAVE', 'Type': 'target'}, {'WordsStimuli': 'CEMENT', 'Type': 'target'}, {'WordsStimuli': 'SUPPER', 'Type': 'target'}, {'WordsStimuli': 'CELL', 'Type': 'target'}, {'WordsStimuli': 'MOTHER', 'Type': 'target'}, {'WordsStimuli': 'WALLET', 'Type': 'target'}, {'WordsStimuli': 'PIMPLE', 'Type': 'target'}, {'WordsStimuli': 'WHEEL', 'Type': 'target'}, {'WordsStimuli': 'STRAW', 'Type': 'target'}, {'WordsStimuli': 'FACE', 'Type': 'target'}, {'WordsStimuli': 'ROOM', 'Type': 'target'}, {'WordsStimuli': 'LIVER', 'Type': 'target'}, {'WordsStimuli': 'VOTER', 'Type': 'target'}, {'WordsStimuli': 'QUART', 'Type': 'target'}, {'WordsStimuli': 'TEAM', 'Type': 'target'}, {'WordsStimuli': 'NOODLE', 'Type': 'target'}, {'WordsStimuli': 'POST', 'Type': 'target'}, {'WordsStimuli': 'GRAVEL', 'Type': 'target'}, {'WordsStimuli': 'SPOON', 'Type': 'target'}, {'WordsStimuli': 'FLAG', 'Type': 'target'}, {'WordsStimuli': 'PILLOW', 'Type': 'target'}, {'WordsStimuli': 'CHILD', 'Type': 'target'}, {'WordsStimuli': 'SILVER', 'Type': 'target'}, {'WordsStimuli': 'RULER', 'Type': 'target'}, {'WordsStimuli': 'CHIN', 'Type': 'target'}, {'WordsStimuli': 'JELLY', 'Type': 'target'}, {'WordsStimuli': 'SMOKE', 'Type': 'target'}, {'WordsStimuli': 'FLESH', 'Type': 'target'}, {'WordsStimuli': 'PANTS', 'Type': 'target'}, {'WordsStimuli': 'COAST', 'Type': 'target'}, {'WordsStimuli': 'HOOK', 'Type': 'target'}, {'WordsStimuli': 'BELT', 'Type': 'target'}, {'WordsStimuli': 'FABRIC', 'Type': 'target'}, {'WordsStimuli': 'SPICE', 'Type': 'target'}, {'WordsStimuli': 'SEWER', 'Type': 'target'}, {'WordsStimuli': 'MUSIC', 'Type': 'target'}, {'WordsStimuli': 'LEADER', 'Type': 'target'}, {'WordsStimuli': 'HAMMER', 'Type': 'target'}, {'WordsStimuli': 'BIRD', 'Type': 'target'}, {'WordsStimuli': 'TIRE', 'Type': 'target'}, {'WordsStimuli': 'BRAKE', 'Type': 'target'}, {'WordsStimuli': 'TAPE', 'Type': 'target'}, {'WordsStimuli': 'WINDOW', 'Type': 'target'}, {'WordsStimuli': 'RIBBON', 'Type': 'target'}, {'WordsStimuli': 'BEER', 'Type': 'target'}, {'WordsStimuli': 'DUMMY', 'Type': 'target'}, {'WordsStimuli': 'RAMP', 'Type': 'target'}, {'WordsStimuli': 'SWEAT', 'Type': 'target'}, {'WordsStimuli': 'WATER', 'Type': 'target'}, {'WordsStimuli': 'DINNER', 'Type': 'target'}, {'WordsStimuli': 'MASTER', 'Type': 'target'}, {'WordsStimuli': 'PAWN', 'Type': 'target'}, {'WordsStimuli': 'SKULL', 'Type': 'target'}, {'WordsStimuli': 'SANDAL', 'Type': 'target'}, {'WordsStimuli': 'VALLEY', 'Type': 'target'}, {'WordsStimuli': 'PLANE', 'Type': 'target'}, {'WordsStimuli': 'LION', 'Type': 'target'}, {'WordsStimuli': 'BROOM', 'Type': 'target'}, {'WordsStimuli': 'CASE', 'Type': 'target'}, {'WordsStimuli': 'PARADE', 'Type': 'target'}, {'WordsStimuli': 'GIRDLE', 'Type': 'target'}, {'WordsStimuli': 'GROIN', 'Type': 'target'}, {'WordsStimuli': 'RABBIT', 'Type': 'target'}, {'WordsStimuli': 'WRECK', 'Type': 'target'}, {'WordsStimuli': 'DRUM', 'Type': 'target'}, {'WordsStimuli': 'CRADLE', 'Type': 'target'}, {'WordsStimuli': 'MILK', 'Type': 'target'}, {'WordsStimuli': 'SINK', 'Type': 'target'}, {'WordsStimuli': 'STEEL', 'Type': 'target'}, {'WordsStimuli': 'SURF', 'Type': 'target'}, {'WordsStimuli': 'BASIN', 'Type': 'target'}, {'WordsStimuli': 'SIGN', 'Type': 'target'}, {'WordsStimuli': 'NAVEL', 'Type': 'target'}, {'WordsStimuli': 'LAWYER', 'Type': 'target'}, {'WordsStimuli': 'TOAD', 'Type': 'target'}, {'WordsStimuli': 'DIRT', 'Type': 'target'}, {'WordsStimuli': 'MATE', 'Type': 'target'}, {'WordsStimuli': 'THUMB', 'Type': 'target'}, {'WordsStimuli': 'SPADE', 'Type': 'target'}, {'WordsStimuli': 'JEEP', 'Type': 'target'}, {'WordsStimuli': 'FARM', 'Type': 'target'}, {'WordsStimuli': 'CORN', 'Type': 'target'}, {'WordsStimuli': 'COLUMN', 'Type': 'target'}, {'WordsStimuli': 'STEW', 'Type': 'target'}, {'WordsStimuli': 'BASKET', 'Type': 'target'}, {'WordsStimuli': 'PIGEON', 'Type': 'target'}, {'WordsStimuli': 'LEMON', 'Type': 'target'}, {'WordsStimuli': 'BILL', 'Type': 'practice'}, {'WordsStimuli': 'BANK', 'Type': 'practice'}, {'WordsStimuli': 'NURSE', 'Type': 'practice'}, {'WordsStimuli': 'MOON', 'Type': 'practice'}, {'WordsStimuli': 'BUTTON', 'Type': 'practice'}, {'WordsStimuli': 'MAPLE', 'Type': 'practice'}, {'WordsStimuli': 'LOCK', 'Type': 'practice'}, {'WordsStimuli': 'SPRUCE', 'Type': 'practice'}, {'WordsStimuli': 'PRIEST', 'Type': 'practice'}, {'WordsStimuli': 'NEEDLE', 'Type': 'practice'}, {'WordsStimuli': 'GROCER', 'Type': 'practice'}, {'WordsStimuli': 'SPOKE', 'Type': 'practice'}, {'WordsStimuli': 'FORK', 'Type': 'practice'}, {'WordsStimuli': 'COLLAR', 'Type': 'practice'}, {'WordsStimuli': 'SINGER', 'Type': 'practice'}, {'WordsStimuli': 'KNIFE', 'Type': 'practice'}, {'WordsStimuli': 'HAZE', 'Type': 'practice'}, {'WordsStimuli': 'HAWK', 'Type': 'practice'}, {'WordsStimuli': 'PLATE', 'Type': 'practice'}, {'WordsStimuli': 'WORLD', 'Type': 'practice'}, {'WordsStimuli': 'SPIDER', 'Type': 'practice'}, {'WordsStimuli': 'GRIP', 'Type': 'practice'}, {'WordsStimuli': 'STEM', 'Type': 'practice'}, {'WordsStimuli': 'DOOR', 'Type': 'practice'}, {'WordsStimuli': 'BACK', 'Type': 'practice'}, {'WordsStimuli': 'CHOP', 'Type': 'practice'}, {'WordsStimuli': 'SPANK', 'Type': 'practice'}, {'WordsStimuli': 'TRAIN', 'Type': 'practice'}, {'WordsStimuli': 'DANCER', 'Type': 'practice'}, {'WordsStimuli': 'TULIP', 'Type': 'practice'}, {'WordsStimuli': 'DUCK', 'Type': 'practice'}, {'WordsStimuli': 'CASH', 'Type': 'practice'}, {'WordsStimuli': 'SPRAY', 'Type': 'practice'}, {'WordsStimuli': 'BEAN', 'Type': 'practice'}, {'WordsStimuli': 'PURSE', 'Type': 'practice'}, {'WordsStimuli': 'WEAPON', 'Type': 'practice'}, {'WordsStimuli': 'SUIT', 'Type': 'practice'}, {'WordsStimuli': 'SLIT', 'Type': 'practice'}, {'WordsStimuli': 'RAKE', 'Type': 'practice'}, {'WordsStimuli': 'SHELL', 'Type': 'practice'}, {'WordsStimuli': 'SHOWER', 'Type': 'practice'}, {'WordsStimuli': 'RASH', 'Type': 'practice'}, {'WordsStimuli': 'OFFICE', 'Type': 'practice'}, {'WordsStimuli': 'SPRING', 'Type': 'practice'}, {'WordsStimuli': 'BEET', 'Type': 'practice'}, {'WordsStimuli': 'SKATE', 'Type': 'practice'}, {'WordsStimuli': 'ARROW', 'Type': 'practice'}, {'WordsStimuli': 'LAMP', 'Type': 'practice'}, {'WordsStimuli': 'LOCKER', 'Type': 'practice'}, {'WordsStimuli': 'CHIEF', 'Type': 'practice'}, {'WordsStimuli': 'MOUTH', 'Type': 'practice'}, {'WordsStimuli': 'PENCIL', 'Type': 'practice'}, {'WordsStimuli': 'HEEL', 'Type': 'practice'}, {'WordsStimuli': 'BRAIN', 'Type': 'practice'}, {'WordsStimuli': 'PASTE', 'Type': 'practice'}, {'WordsStimuli': 'THIEF', 'Type': 'practice'}, {'WordsStimuli': 'BEAR', 'Type': 'practice'}, {'WordsStimuli': 'FILM', 'Type': 'practice'}, {'WordsStimuli': 'CLOUD', 'Type': 'practice'}, {'WordsStimuli': 'NERVE', 'Type': 'practice'}, {'WordsStimuli': 'STABLE', 'Type': 'practice'}, {'WordsStimuli': 'SKUNK', 'Type': 'practice'}, {'WordsStimuli': 'BUCKET', 'Type': 'practice'}, {'WordsStimuli': 'BRIDGE', 'Type': 'practice'}, {'WordsStimuli': 'JUDGE', 'Type': 'practice'}, {'WordsStimuli': 'SLIDE', 'Type': 'practice'}, {'WordsStimuli': 'DESK', 'Type': 'practice'}, {'WordsStimuli': 'ELBOW', 'Type': 'practice'}, {'WordsStimuli': 'MOLD', 'Type': 'distractor'}, {'WordsStimuli': 'ROOT', 'Type': 'distractor'}, {'WordsStimuli': 'SCAR', 'Type': 'distractor'}, {'WordsStimuli': 'MEDAL', 'Type': 'distractor'}, {'WordsStimuli': 'NAIL', 'Type': 'distractor'}, {'WordsStimuli': 'SQUARE', 'Type': 'distractor'}, {'WordsStimuli': 'NOVEL', 'Type': 'distractor'}, {'WordsStimuli': 'ESTATE', 'Type': 'distractor'}, {'WordsStimuli': 'PAGE', 'Type': 'distractor'}, {'WordsStimuli': 'WALRUS', 'Type': 'distractor'}, {'WordsStimuli': 'STORM', 'Type': 'distractor'}, {'WordsStimuli': 'MINK', 'Type': 'distractor'}, {'WordsStimuli': 'SOFA', 'Type': 'distractor'}, {'WordsStimuli': 'CARROT', 'Type': 'distractor'}, {'WordsStimuli': 'TREE', 'Type': 'distractor'}, {'WordsStimuli': 'LINT', 'Type': 'distractor'}, {'WordsStimuli': 'CORNER', 'Type': 'distractor'}, {'WordsStimuli': 'PENNY', 'Type': 'distractor'}, {'WordsStimuli': 'HALL', 'Type': 'distractor'}, {'WordsStimuli': 'PICK', 'Type': 'distractor'}, {'WordsStimuli': 'PUMP', 'Type': 'distractor'}, {'WordsStimuli': 'MEAT', 'Type': 'distractor'}, {'WordsStimuli': 'LUMP', 'Type': 'distractor'}, {'WordsStimuli': 'SOUP', 'Type': 'distractor'}, {'WordsStimuli': 'TEAR', 'Type': 'distractor'}, {'WordsStimuli': 'STOVE', 'Type': 'distractor'}, {'WordsStimuli': 'SOCCER', 'Type': 'distractor'}, {'WordsStimuli': 'HEDGE', 'Type': 'distractor'}, {'WordsStimuli': 'TOOTH', 'Type': 'distractor'}, {'WordsStimuli': 'FOOT', 'Type': 'distractor'}, {'WordsStimuli': 'RIFLE', 'Type': 'distractor'}, {'WordsStimuli': 'OBJECT', 'Type': 'distractor'}, {'WordsStimuli': 'SHOVEL', 'Type': 'distractor'}, {'WordsStimuli': 'CROW', 'Type': 'distractor'}, {'WordsStimuli': 'BOOT', 'Type': 'distractor'}, {'WordsStimuli': 'MONEY', 'Type': 'distractor'}, {'WordsStimuli': 'RACK', 'Type': 'distractor'}, {'WordsStimuli': 'JAIL', 'Type': 'distractor'}, {'WordsStimuli': 'ARMY', 'Type': 'distractor'}, {'WordsStimuli': 'VOICE', 'Type': 'distractor'}, {'WordsStimuli': 'PIANO', 'Type': 'distractor'}, {'WordsStimuli': 'PORK', 'Type': 'distractor'}, {'WordsStimuli': 'CITY', 'Type': 'distractor'}, {'WordsStimuli': 'CORD', 'Type': 'distractor'}, {'WordsStimuli': 'WHIP', 'Type': 'distractor'}, {'WordsStimuli': 'PORT', 'Type': 'distractor'}, {'WordsStimuli': 'MAIL', 'Type': 'distractor'}, {'WordsStimuli': 'WALL', 'Type': 'distractor'}, {'WordsStimuli': 'BREATH', 'Type': 'distractor'}, {'WordsStimuli': 'BURN', 'Type': 'distractor'}, {'WordsStimuli': 'WINK', 'Type': 'distractor'}, {'WordsStimuli': 'DART', 'Type': 'distractor'}, {'WordsStimuli': 'BODY', 'Type': 'distractor'}, {'WordsStimuli': 'GUEST', 'Type': 'distractor'}, {'WordsStimuli': 'TUBE', 'Type': 'distractor'}, {'WordsStimuli': 'BLOOD', 'Type': 'distractor'}, {'WordsStimuli': 'DAISY', 'Type': 'distractor'}, {'WordsStimuli': 'MOTH', 'Type': 'distractor'}, {'WordsStimuli': 'HEAD', 'Type': 'distractor'}, {'WordsStimuli': 'DIME', 'Type': 'distractor'}, {'WordsStimuli': 'BULLET', 'Type': 'distractor'}, {'WordsStimuli': 'WOMB', 'Type': 'distractor'}, {'WordsStimuli': 'DENT', 'Type': 'distractor'}, {'WordsStimuli': 'FOREST', 'Type': 'distractor'}, {'WordsStimuli': 'ATOM', 'Type': 'distractor'}, {'WordsStimuli': 'STOOL', 'Type': 'distractor'}, {'WordsStimuli': 'LIZARD', 'Type': 'distractor'}, {'WordsStimuli': 'JURY', 'Type': 'distractor'}, {'WordsStimuli': 'CLOVER', 'Type': 'distractor'}, {'WordsStimuli': 'CHAIN', 'Type': 'distractor'}, {'WordsStimuli': 'WALNUT', 'Type': 'distractor'}, {'WordsStimuli': 'ITCH', 'Type': 'distractor'}, {'WordsStimuli': 'RAIL', 'Type': 'distractor'}, {'WordsStimuli': 'LIMB', 'Type': 'distractor'}, {'WordsStimuli': 'STAR', 'Type': 'distractor'}, {'WordsStimuli': 'BRAT', 'Type': 'distractor'}, {'WordsStimuli': 'BANKER', 'Type': 'distractor'}, {'WordsStimuli': 'WHEAT', 'Type': 'distractor'}, {'WordsStimuli': 'NICKEL', 'Type': 'distractor'}, {'WordsStimuli': 'PUPIL', 'Type': 'distractor'}, {'WordsStimuli': 'TONGUE', 'Type': 'distractor'}, {'WordsStimuli': 'GALLON', 'Type': 'distractor'}, {'WordsStimuli': 'BEETLE', 'Type': 'distractor'}, {'WordsStimuli': 'MALE', 'Type': 'distractor'}, {'WordsStimuli': 'BENCH', 'Type': 'distractor'}, {'WordsStimuli': 'WINE', 'Type': 'distractor'}, {'WordsStimuli': 'WIFE', 'Type': 'distractor'}, {'WordsStimuli': 'PINT', 'Type': 'distractor'}, {'WordsStimuli': 'AUTHOR', 'Type': 'distractor'}, {'WordsStimuli': 'LIMP', 'Type': 'distractor'}, {'WordsStimuli': 'CHAIR', 'Type': 'distractor'}, {'WordsStimuli': 'LEVER', 'Type': 'distractor'}, {'WordsStimuli': 'FATHER', 'Type': 'distractor'}, {'WordsStimuli': 'TWIG', 'Type': 'distractor'}, {'WordsStimuli': 'TRUCK', 'Type': 'distractor'}, {'WordsStimuli': 'SALT', 'Type': 'distractor'}, {'WordsStimuli': 'FLASH', 'Type': 'distractor'}, {'WordsStimuli': 'OUTFIT', 'Type': 'distractor'}, {'WordsStimuli': 'POISON', 'Type': 'distractor'}, {'WordsStimuli': 'BEEF', 'Type': 'distractor'}, {'WordsStimuli': 'SHEEP', 'Type': 'distractor'}, {'WordsStimuli': 'COVER', 'Type': 'distractor'}, {'WordsStimuli': 'SISTER', 'Type': 'distractor'}, {'WordsStimuli': 'GRAVE', 'Type': 'distractor'}, {'WordsStimuli': 'SUGAR', 'Type': 'distractor'}, {'WordsStimuli': 'STORE', 'Type': 'distractor'}, {'WordsStimuli': 'HOUSE', 'Type': 'distractor'}, {'WordsStimuli': 'JACKET', 'Type': 'distractor'}, {'WordsStimuli': 'IRON', 'Type': 'distractor'}, {'WordsStimuli': 'BONE', 'Type': 'distractor'}]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="stimuli/words_text_B.xlsx" valType="str"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="False" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="name" updates="None" val="start" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="setup"/>
+    <LoopTerminator name="start"/>
+    <LoopInitiator loopType="TrialHandler" name="trials_rei">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('rei_question', 'I’m not that good at figuring out complicated problems')]), OrderedDict([('rei_question', 'I am not very good at solving problems that require careful logical analysis')]), OrderedDict([('rei_question', 'I am not a very analytical thinker')]), OrderedDict([('rei_question', 'Reasoning things out carefully is not one of my strong points')]), OrderedDict([('rei_question', 'I don’t reason well under pressure')]), OrderedDict([('rei_question', 'I am much better at figuring things out logically than most people')]), OrderedDict([('rei_question', 'I have a logical mind')]), OrderedDict([('rei_question', 'I have no problem thinking things through carefully')]), OrderedDict([('rei_question', 'Using logic usually works well for me in figuring out problems in my life')]), OrderedDict([('rei_question', 'I usually have clear, explainable reasons for my decisions')]), OrderedDict([('rei_question', 'I try to avoid situations that require thinking in depth about something')]), OrderedDict([('rei_question', 'I enjoy intellectual challenges')]), OrderedDict([('rei_question', 'I don’t like to have to do a lot of thinking')]), OrderedDict([('rei_question', 'I enjoy solving problems that require hard thinking')]), OrderedDict([('rei_question', 'Thinking is not my idea of an enjoyable activity')]), OrderedDict([('rei_question', 'I prefer complex problems to simple problems')]), OrderedDict([('rei_question', 'Thinking hard and for a long time about something gives me little satisfaction')]), OrderedDict([('rei_question', 'I enjoy thinking in abstract terms')]), OrderedDict([('rei_question', 'Knowing the answer without having to understand the reasoning behind it is good enough for me')]), OrderedDict([('rei_question', 'Learning new ways to think would be very appealing to me')]), OrderedDict([('rei_question', 'I don’t have a very good sense of intuition')]), OrderedDict([('rei_question', 'Using my gut feelings usually works well for me in figuring out problems in my life.')]), OrderedDict([('rei_question', 'I believe in trusting my hunches')]), OrderedDict([('rei_question', 'I trust my initial feelings about people')]), OrderedDict([('rei_question', 'When it comes to trusting people, I can usually rely on my gut feelings')]), OrderedDict([('rei_question', 'If I were to rely on my gut feelings, I would often make mistakes')]), OrderedDict([('rei_question', 'I hardly ever go wrong when I listen to my deepest gut feelings to find an answer')]), OrderedDict([('rei_question', 'My snap judgments are probably not as good as most people’s')]), OrderedDict([('rei_question', 'I can usually feel when a person is right or wrong, even if I can’t explain how I know')]), OrderedDict([('rei_question', 'I suspect my hunches are inaccurate as often as they are accurate')]), OrderedDict([('rei_question', 'I like to rely on my intuitive impressions')]), OrderedDict([('rei_question', 'Intuition can be a very useful way to solve problems')]), OrderedDict([('rei_question', 'I often go by my instincts when deciding on a course of action')]), OrderedDict([('rei_question', 'I don’t like situations in which I have to rely on intuition')]), OrderedDict([('rei_question', 'I think there are times when one should rely on one’s intuition')]), OrderedDict([('rei_question', 'I think it is foolish to make important decisions based on feelings')]), OrderedDict([('rei_question', 'I don’t think it is a good idea to rely on one’s intuition for important decisions')]), OrderedDict([('rei_question', 'I generally don’t depend on my feelings to help me make decisions')]), OrderedDict([('rei_question', 'I  would  not  want  to  depend  on  anyone  who  described  himself  or  herself  as  intuitive')]), OrderedDict([('rei_question', 'I tend to use my heart as a guide for my actions')])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="stimuli/REI_scale.xlsx" valType="str"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="name" updates="None" val="trials_rei" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="rei_scale"/>
+    <LoopTerminator name="trials_rei"/>
+    <Routine name="instructions_ltm"/>
+    <LoopInitiator loopType="TrialHandler" name="trial_ltm">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="None" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="" valType="str"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="words_target.length" valType="code"/>
+      <Param name="name" updates="None" val="trial_ltm" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="recognition_test"/>
+    <LoopTerminator name="trial_ltm"/>
+    <Routine name="end_experiment"/>
+  </Flow>
+</PsychoPy2experiment>

@@ -1,0 +1,211 @@
+num,cond,formula,answer
+23752,fifth_level,1 * 5 - 4 / 2,3
+31063,fifth_level,2 * 6 - 8 / 2,8
+33764,fifth_level,3 * 2 - 2 - 3,1
+40635,fifth_level,4 + 3 - 5 * 1,2
+28846,fifth_level,2 + 3 * 3 - 8,3
+31678,fifth_level,2 / 8 * 2 * 2,1
+28738,fifth_level,2 + 3 + 3 * 1,8
+28277,fifth_level,2 / 2 * 7 + 1,8
+60498,fifth_level,8 - 2 / 3 * 6,4
+35292,fifth_level,3 + 4 / 1 - 2,5
+60169,fifth_level,8 - 2 + 1 * 2,8
+38154,fifth_level,4 / 1 * 1 + 1,5
+64110,fifth_level,8 / 8 + 9 - 9,1
+30819,fifth_level,2 + 6 * 3 / 9,4
+20435,fifth_level,1 / 1 - 2 + 2,1
+32700,fifth_level,3 + 1 + 2 / 2,5
+55322,fifth_level,7 + 1 - 8 / 8,7
+30638,fifth_level,2 * 6 / 2 / 1,6
+34520,fifth_level,3 / 3 + 1 * 7,8
+23013,fifth_level,1 + 4 - 3 + 1,3
+49503,fifth_level,6 * 1 + 5 - 7,4
+54423,fifth_level,6 / 9 * 9 / 1,6
+31125,fifth_level,2 * 6 / 9 * 6,8
+35405,fifth_level,3 + 4 - 2 / 1,5
+55204,fifth_level,7 / 1 / 7 * 4,4
+39383,fifth_level,4 + 2 * 2 - 1,7
+62954,fifth_level,8 + 6 / 6 - 1,8
+26299,fifth_level,1 + 9 / 9 + 1,3
+48725,fifth_level,5 - 9 + 6 + 5,7
+39478,fifth_level,4 * 2 + 2 - 3,7
+59921,fifth_level,8 + 1 - 7 + 4,6
+52932,fifth_level,6 + 6 - 3 - 3,6
+23090,fifth_level,1 + 4 - 4 * 1,1
+24282,fifth_level,1 - 6 + 2 * 6,7
+23574,fifth_level,1 - 5 + 1 * 6,2
+43807,fifth_level,4 + 9 / 9 - 3,2
+35497,fifth_level,3 + 4 + 2 - 8,1
+64923,fifth_level,9 * 1 + 4 - 7,6
+25019,fifth_level,1 + 7 * 4 / 7,5
+67619,fifth_level,9 - 6 - 3 / 3,2
+55946,fifth_level,7 / 2 / 7 * 2,1
+35781,fifth_level,3 - 4 - 6 + 8,1
+11,first_level,2 + 4,6
+13,first_level,2 + 6,8
+14,first_level,3 + 1,4
+20,first_level,3 + 5,8
+49,first_level,8 - 1,7
+58,first_level,9 - 3,6
+38,first_level,6 - 2,4
+0,first_level,1 + 1,2
+8,first_level,2 - 1,1
+46,first_level,7 - 4,3
+63,first_level,9 - 8,1
+47,first_level,7 - 5,2
+24,first_level,4 - 2,2
+37,first_level,6 + 2,8
+26,first_level,4 - 3,1
+51,first_level,8 - 3,5
+57,first_level,9 - 2,7
+23,first_level,4 + 2,6
+48,first_level,7 - 6,1
+5,first_level,1 + 6,7
+3,first_level,1 + 4,5
+7,first_level,2 + 1,3
+40,first_level,6 - 4,2
+59,first_level,9 - 4,5
+60,first_level,9 - 5,4
+1,first_level,1 + 2,3
+52,first_level,8 - 4,4
+30,first_level,5 + 2,7
+42,first_level,7 + 1,8
+19,first_level,3 + 4,7
+32,first_level,5 + 3,8
+41,first_level,6 - 5,1
+55,first_level,8 - 7,1
+50,first_level,8 - 2,6
+18,first_level,3 + 3,6
+29,first_level,5 - 1,4
+31,first_level,5 - 2,3
+9,first_level,2 + 2,4
+36,first_level,6 - 1,5
+54,first_level,8 - 6,2
+6,first_level,1 + 7,8
+4,first_level,1 + 5,6
+17509,fourth_level,4 / 1 / 6 * 6,4
+17642,fourth_level,4 / 2 / 8 * 4,1
+18137,fourth_level,5 / 2 / 5 * 6,3
+17728,fourth_level,4 / 4 / 1 / 1,1
+17003,fourth_level,3 * 2 / 3 / 2,1
+19509,fourth_level,8 * 3 / 8 / 3,1
+16096,fourth_level,1 * 8 * 4 / 8,4
+19555,fourth_level,8 / 4 * 3 / 3,2
+16666,fourth_level,2 / 6 * 1 * 9,3
+18476,fourth_level,6 * 2 * 1 / 3,4
+18751,fourth_level,6 / 6 * 1 * 4,4
+18469,fourth_level,6 / 2 * 1 / 1,3
+15528,fourth_level,1 * 1 * 4 * 1,4
+18114,fourth_level,5 / 2 * 2 / 1,5
+16600,fourth_level,2 / 4 * 7 * 2,7
+18686,fourth_level,6 * 4 / 3 / 8,1
+17678,fourth_level,4 / 3 / 2 * 6,4
+18412,fourth_level,6 / 1 * 4 / 4,6
+19088,fourth_level,7 * 4 / 1 / 4,7
+18964,fourth_level,7 * 1 * 3 / 3,7
+18993,fourth_level,7 / 1 / 7 * 2,2
+17221,fourth_level,3 * 5 * 2 / 6,5
+15688,fourth_level,1 * 2 / 8 * 8,2
+17982,fourth_level,4 / 8 * 6 / 1,3
+19295,fourth_level,8 * 1 / 2 / 4,1
+16118,fourth_level,1 * 8 / 8 * 3,3
+16341,fourth_level,2 * 2 * 2 * 1,8
+16593,fourth_level,2 / 4 * 6 / 1,3
+19717,fourth_level,8 / 8 / 1 * 5,5
+16099,fourth_level,1 * 8 / 5 * 5,8
+18019,fourth_level,4 * 9 / 6 / 2,3
+16497,fourth_level,2 / 3 * 6 * 1,4
+17228,fourth_level,3 / 5 * 5 * 1,3
+17420,fourth_level,4 / 1 * 1 * 1,4
+16735,fourth_level,2 * 7 / 2 * 1,7
+19063,fourth_level,7 * 3 / 1 / 7,3
+16180,fourth_level,1 / 9 * 9 * 7,7
+17449,fourth_level,4 / 1 / 2 / 2,1
+17354,fourth_level,3 * 8 / 4 / 2,3
+17905,fourth_level,4 / 6 * 9 * 1,6
+18931,fourth_level,6 / 9 * 6 / 2,2
+15469,fourth_level,1 / 1 / 1 * 2,2
+3655,second_level,3 + 1 + 8 - 6,6
+10068,second_level,6 + 7 - 8 + 2,7
+8810,second_level,6 - 1 + 6 - 4,7
+3157,second_level,2 + 8 - 1 - 2,7
+1816,second_level,2 + 1 + 3 - 4,2
+6217,second_level,4 - 5 + 6 - 1,4
+9579,second_level,6 + 5 - 1 - 9,1
+12184,second_level,8 + 1 - 4 - 1,4
+11543,second_level,7 - 6 - 4 + 8,5
+2275,second_level,2 + 3 - 4 + 1,2
+7855,second_level,5 + 5 + 1 - 9,2
+14385,second_level,9 - 4 + 1 - 3,3
+11899,second_level,7 - 8 + 6 + 2,7
+7900,second_level,5 + 5 + 3 - 6,7
+4289,second_level,3 - 4 - 6 + 9,2
+13235,second_level,8 + 6 - 6 - 1,7
+3817,second_level,3 - 2 + 5 - 5,1
+6291,second_level,4 + 6 - 1 - 5,4
+13251,second_level,8 - 6 - 6 + 7,3
+2750,second_level,2 + 5 + 6 - 8,5
+11095,second_level,7 - 4 - 2 + 5,6
+4759,second_level,3 - 7 + 2 + 7,5
+8953,second_level,6 + 2 - 3 + 1,6
+10175,second_level,6 + 8 - 5 - 2,7
+3721,second_level,3 - 2 + 2 + 1,4
+2234,second_level,2 + 3 - 2 + 4,7
+734,second_level,1 + 4 + 2 - 4,3
+14732,second_level,9 + 5 - 8 - 4,2
+10576,second_level,7 - 1 - 7 + 9,8
+8128,second_level,5 - 6 + 5 - 3,1
+3999,second_level,3 - 3 - 3 + 7,4
+11561,second_level,7 + 6 - 5 - 7,1
+6911,second_level,4 + 9 - 9 - 2,2
+6091,second_level,4 + 5 - 1 - 2,6
+2031,second_level,2 - 2 + 3 + 1,4
+10857,second_level,7 + 3 - 1 - 5,4
+4153,second_level,3 + 4 + 1 - 5,3
+4609,second_level,3 - 6 + 3 + 7,7
+6933,second_level,5 - 1 - 1 + 2,5
+12270,second_level,8 - 1 - 7 + 7,7
+11763,second_level,7 + 7 - 7 - 4,3
+8279,second_level,5 + 7 - 4 - 5,3
+15445,third_level,6 / 2,3
+15416,third_level,1 * 1,1
+15440,third_level,5 * 1,5
+15449,third_level,7 / 1,7
+15435,third_level,4 * 1,4
+15452,third_level,8 / 1,8
+15444,third_level,6 / 1,6
+15421,third_level,1 * 5,5
+15429,third_level,2 * 3,6
+15430,third_level,2 * 4,8
+15442,third_level,5 / 5,1
+15424,third_level,1 * 8,8
+15437,third_level,4 * 2,8
+15425,third_level,2 * 1,2
+15438,third_level,4 / 2,2
+15439,third_level,4 / 4,1
+15443,third_level,6 * 1,6
+15456,third_level,9 / 3,3
+15431,third_level,3 * 1,3
+15428,third_level,2 / 2,1
+15441,third_level,5 / 1,5
+15451,third_level,8 * 1,8
+15422,third_level,1 * 6,6
+15426,third_level,2 / 1,2
+15417,third_level,1 / 1,1
+15447,third_level,6 / 6,1
+15450,third_level,7 / 7,1
+15434,third_level,3 / 3,1
+15446,third_level,6 / 3,2
+15418,third_level,1 * 2,2
+15432,third_level,3 / 1,3
+15436,third_level,4 / 1,4
+15455,third_level,8 / 8,1
+15453,third_level,8 / 2,4
+15454,third_level,8 / 4,2
+15433,third_level,3 * 2,6
+15420,third_level,1 * 4,4
+15427,third_level,2 * 2,4
+15457,third_level,9 / 9,1
+15419,third_level,1 * 3,3
+15423,third_level,1 * 7,7
+15448,third_level,7 * 1,7
